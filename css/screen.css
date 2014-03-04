@@ -58,3 +58,83 @@ table {
 a {
   color: #693416;
 }
+
+.actions {
+  height: 20px !important;
+  display: inline-block;
+}
+.actions li {
+  float: left;
+  padding: 2px 8px;
+}
+
+.alert {
+  width: 630px;
+  position: relative;
+  top: 0;
+  z-index: 2;
+  padding: 4px;
+  margin: 5px;
+  font-style: italic;
+  background: #DDD;
+  border-radius: 5px;
+}
+
+nav {
+  display: block;
+  vertical-align: top;
+  position: absolute;
+  width: 100px;
+}
+nav a {
+  padding: 4px 0;
+  text-decoration: none;
+}
+
+.container {
+  height: 600px;
+  left: 150px;
+  top: 0;
+  width: 840px;
+  position: relative;
+  display: block;
+}
+
+.items ul {
+  margin: 2px 5px;
+  height: 270px;
+  width: 210px;
+  display: inline-block;
+}
+
+.caption {
+  position: relative;
+  height: 70px;
+  z-index: 2;
+  top: -10px;
+  padding: 4px;
+  background: #DDD;
+  border-radius: 0 0 10px 10px;
+}
+.caption h3 {
+  font-weight: bold;
+  width: 100px;
+  float: left;
+}
+.caption h3 a {
+  text-decoration: none;
+}
+.caption p {
+  width: 100px;
+  float: left;
+  font-size: 10pt;
+  height: 50px;
+}
+
+.item {
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  background-image: url("http://fillmurray.com/210/200");
+  height: 210px;
+  width: 210px;
+}

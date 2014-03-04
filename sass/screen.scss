@@ -1,13 +1,12 @@
 @import "library";
 @import "reset";
 
-$max_width: 960px;
-$gutter_width: 20px;
-$col_count: 12;
+$gutter_width: 10px;
+$col_count: 8;
 $gutter_count: $col_count - 1;
 $total_gutter_width: $gutter_count * $gutter_width;
 
-$col_width: ($max_width - $total_gutter_width) / $col_count;
+$col_width: 210px;
 
 // Global templates
 
@@ -17,9 +16,8 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
     content: "";
 }
 
-%container {
-    margin: 0 auto;
-    width: $max_width;
+@mixin columnify($num_cols) {
+	width: $col_width * $num_cols + $gutter_width * ($num_cols - 1);
 }
 
 // Global tags
@@ -32,3 +30,109 @@ a {
 }
 
 // Everything else
+
+.actions {
+	height: 20px !important;
+	display: inline-block;
+
+	li {
+		float: left;
+		padding: 2px 8px;
+	}
+}
+
+.alert {
+	width: $col_width*3;
+	position: relative;
+	top: 0;
+	z-index: 2;
+	padding: 4px;
+	margin: 5px;
+	font-style: italic;
+	background: #DDD;
+	border-radius: 5px;
+}
+
+nav {
+	display: block;
+	vertical-align: top;
+	position: absolute;
+	width: 100px;
+
+	a {
+		padding: 4px 0;
+		text-decoration: none;
+
+		img {
+
+		}
+	}
+}
+
+.container {
+	height: 600px;
+	left: 150px;
+	top: 0;
+	width: $col_width*4;
+	position: relative;
+	display: block;
+}
+
+.items {
+
+	ul {
+		margin: 2px 5px;
+		height: 270px;
+		width: $col_width;
+		display: inline-block;
+	}
+
+}
+
+.caption {
+	position: relative;
+	height: 70px;
+	z-index: 2;
+	top: -10px;
+	padding: 4px;
+	background: #DDD;
+	border-radius: 0 0 10px 10px;
+
+	h3 {
+		font-weight: bold;
+		width: 100px;
+		float: left;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	p {
+		width: 100px;
+		float: left;
+		font-size: 10pt;
+		height: 50px;
+	}
+}
+
+.item {
+	position: relative;
+	border-radius: 10px 10px 0 0;
+	background-image: url("http://fillmurray.com/210/200");
+	height: $col_width;
+	width: $col_width
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
